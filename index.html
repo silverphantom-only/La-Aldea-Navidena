@@ -120,6 +120,34 @@
     button {
       margin-top: 20px;
     }
+
+    /* Estilos para colaboradores */
+    .colaboradores-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .colaborador {
+      text-align: center;
+      max-width: 150px;
+    }
+
+    .colaborador img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #f44336;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .colaborador p {
+      margin-top: 10px;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -181,6 +209,25 @@
         <li>👨‍👩‍👧‍👦 Ambiente familiar.</li>
       </ul>
     </section>
+
+    <!-- NUEVA SECCIÓN DE COLABORADORES -->
+    <section class="section colaboradores">
+      <h2>Colaboradores</h2>
+      <div class="colaboradores-grid">
+        <div class="colaborador">
+          <img src="assets/img/ana.jpg" alt="Ana Pérez">
+          <p>Ana Pérez</p>
+        </div>
+        <div class="colaborador">
+          <img src="assets/img/luis.jpg" alt="Luis Gómez">
+          <p>Luis Gómez</p>
+        </div>
+        <div class="colaborador">
+          <img src="assets/img/maria.jpg" alt="María López">
+          <p>María López</p>
+        </div>
+      </div>
+    </section>
   </div>
 
   <footer>
@@ -197,13 +244,8 @@
       const correo = document.getElementById('correo').value;
 
       const numero = "524151671705";
-      const mensaje = `Hola, quiero reservar mi lugar para *La Aldea Navideña*.
-
-` +
-                      `👤 Nombre: ${nombre}
-📅 Fecha: ${fecha}
-📍 Lugar de origen: ${origen}
-📧 Correo: ${correo}`;
+      const mensaje = `Hola, quiero reservar mi lugar para *La Aldea Navideña*.\n\n` +
+                      `👤 Nombre: ${nombre}\n📅 Fecha: ${fecha}\n📍 Lugar de origen: ${origen}\n📧 Correo: ${correo}`;
 
       const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
       window.open(url, '_blank');
