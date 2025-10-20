@@ -1,0 +1,7 @@
+/tu-proyecto
+├── index.html
+└── assets/
+    └── img/
+        ├── ana.jpg
+        ├── luis.jpg
+        └── maria.jpg
