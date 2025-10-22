@@ -135,19 +135,37 @@
       max-width: 150px;
     }
 
-    .colaborador img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 2px solid #f44336;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
+    .colaboradores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+  margin-top: 20px;
+}
 
-    .colaborador p {
-      margin-top: 10px;
-      font-weight: bold;
-    }
+.colaborador {
+  text-align: center;
+}
+
+.colaborador img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #f44336;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.colaborador img:hover {
+  transform: scale(1.1);
+}
+
+.colaborador p {
+  margin-top: 10px;
+  font-weight: bold;
+}
   </style>
 </head>
 <body>
